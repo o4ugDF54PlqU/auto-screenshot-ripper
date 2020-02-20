@@ -1,2 +1,2 @@
 # auto-screenshot-ripper
-An ahk script to rip mangas/comics/books with "unstrippable" DRM
+I made this after buying some manga from Bookwalker, only to find that they had DRM that no one had been able to crack. So I just went around the problem and made this script which screenshots every page in the book. Usage instructions coming soon. Relies on the Windows 10 snipping tool and autohotkey. Though designed for the Bookwalker PC app, it should work with any other reader apps with a little tweaking. Works best if you have a high resolution monitor/dummy plug.
