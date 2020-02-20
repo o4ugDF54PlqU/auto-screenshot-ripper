@@ -1,12 +1,27 @@
-s::mainloop()
-n::onemore()
+MsgBox, You must select the reader before starting with r and don't forget to edit the number of times the loop runs in the script. Also remember to minimize all other apps except the viewer and set the snipping tool to window snip.
+
+r::mainloop()
+o::onemore()
 p::Pause
 q::exitapp
+s::setwin()
+global x
+global y
+
+setwin()
+{
+id := WinExist("A")
+WinGetPos, x, y, width, height, ahk_id %id%
+MouseMove, width+10, 0
+Click
+x:=x+(width/2)
+y:=y+(height/2)
+}
 
 mainloop(){
-Loop, 168
-
+Loop, 10
 {
+setwin()
 onemore()
 }
 }
@@ -14,8 +29,8 @@ onemore()
 onemore()
 {
 Send {LWin down}{Shift down}s{Shift up}{LWin up}
-Sleep, 1000
-MouseMove, 2200, 200
+Sleep, 1500
+MouseMove, x, y
 Sleep, 100
 Click
 Sleep, 2000
@@ -28,14 +43,8 @@ Send {Enter}
 Sleep, 1300
 Send {Alt down}{F4}{Alt up}
 Sleep, 200
-Click
-Sleep, 50
-MouseMove, 2200, 200
-Click
+WinActivate, ahk_id %id%
 Sleep, 100
 Send {Left}
 Sleep, 100
-MouseMove, -1000, 400
-Click
-Sleep, 50
 }
