@@ -22,5 +22,5 @@ Random, randy, 0, 300
 Sleep, 900+randy
 Send {Right}
 Random, randy, 0, 300
-Sleep, 3500+randy
+Sleep, 7000+randy
 }
