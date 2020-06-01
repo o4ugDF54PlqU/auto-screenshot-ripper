@@ -8,6 +8,7 @@ Loop, 30
 {
 onemore()
 }
+exitapp
 }
 
 onemore()
@@ -22,5 +23,5 @@ Random, randy, 0, 300
 Sleep, 900+randy
 Send {Right}
 Random, randy, 0, 300
-Sleep, 7000+randy
+Sleep, 9500+randy
 }
